@@ -1,0 +1,59 @@
+@mixin transition {
+    -webkit-transition: all 0.5s ease-in-out;
+    -moz-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    }
+    @mixin corners ($radius) {
+    -moz-border-radius: $radius;
+    -webkit-border-radius: $radius;
+    border-radius: $radius; 
+    -khtml-border-radius: $radius; 
+    }
+body{
+    background:linear-gradient(to left ,rgb(9, 9, 255),rgb(0, 255, 21));
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    height: 100%;}
+    .wrapper{
+        width: 800px;
+        margin: 30px auto;
+        color: black;
+        text-align: center;
+    }
+h1,h2{
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 5000;
+    font-size: 2.6em;
+    text-transform: uppercase;
+}
+h3{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 5000;
+    font-size: 1.6em;
+    text-transform: uppercase;
+}
+
+#seconds,#tens{
+    font-size: 2em;
+    
+}
+button{
+@include corners(5px);
+background:linear-gradient(to right ,rgb(9, 9, 255),rgb(0, 255, 115));
+color: black;
+border: solid 2px black;
+text-decoration: none;
+cursor: pointer;
+font-size: 1.2em;
+padding: 18px 10px;
+width: 180px;
+margin: 10px;
+outline: none;
+}
+ button:hover{
+    background : white;
+    border: solid 2px white;
+    color: black;
+}
+.fieldset{
+    border: 5px black solid;
+}
